@@ -69,6 +69,8 @@ I used the following resources to help guide me to complete the portfolio projec
 - [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 - [Node.js Introduction](https://www.w3schools.com/nodejs/nodejs_intro.asp)
 - [Inquirer.js](https://www.npmjs.com/package/inquirer/v/8.2.4)
+- [Mongoose](https://www.npmjs.com/package/mongoose)
+- [Express.js](https://www.npmjs.com/package/express)
 - [Jest](https://www.npmjs.com/package/jest)
 - [How to take a full page screenshot with a hidden Chrome shortcut](https://zapier.com/blog/full-page-screenshots-in-chrome/)
 
@@ -79,12 +81,12 @@ I used the following resources to help guide me to complete the portfolio projec
 ## Badges
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
-
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+
 
 ## Features
 
