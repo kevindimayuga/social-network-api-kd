@@ -72,6 +72,7 @@ I used the following resources to help guide me to complete the portfolio projec
 - [Mongoose](https://www.npmjs.com/package/mongoose)
 - [Express.js](https://www.npmjs.com/package/express)
 - [Jest](https://www.npmjs.com/package/jest)
+- [Validator.js](https://www.npmjs.com/package/validator)
 - [How to take a full page screenshot with a hidden Chrome shortcut](https://zapier.com/blog/full-page-screenshots-in-chrome/)
 
 ## License
