@@ -73,6 +73,7 @@ I used the following resources to help guide me to complete the portfolio projec
 - [Express.js](https://www.npmjs.com/package/express)
 - [Jest](https://www.npmjs.com/package/jest)
 - [Validator.js](https://www.npmjs.com/package/validator)
+- [Moment.js](https://www.npmjs.com/package/moment)
 - [How to take a full page screenshot with a hidden Chrome shortcut](https://zapier.com/blog/full-page-screenshots-in-chrome/)
 
 ## License
@@ -87,7 +88,6 @@ I used the following resources to help guide me to complete the portfolio projec
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-
 
 ## Features
 
