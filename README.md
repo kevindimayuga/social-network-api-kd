@@ -76,6 +76,9 @@ I used the following resources to help guide me to complete the portfolio projec
 - [Moment.js](https://www.npmjs.com/package/moment)
 - [How to take a full page screenshot with a hidden Chrome shortcut](https://zapier.com/blog/full-page-screenshots-in-chrome/)
 
+
+I referred back to Module 18: NoSQL to review activities and the mini project to help me complete the code necessary for this project.
+
 ## License
 
 - [MIT](https://opensource.org/license/mit/)
