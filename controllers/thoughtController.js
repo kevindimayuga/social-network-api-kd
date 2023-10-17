@@ -102,7 +102,30 @@ module.exports = {
             // This will send the updated thought data
             res.json(thought);
         }
+        // If there is an error, this will send the 500 error message
+        catch (err) {
+            res.status(500).json(err);
+        }
+    },
 
     // This will DELETE a reaction by the reaction's '_id' value
-
+    async deleteReaction(req, res) {
+            try {
+                const thought = await Thought.findOneAndUpdate(
+                    { _id: req.params.thoughtId },
+                    { $pull: { reactions: { reactionId: req.params.reactionId } } },
+                    { runValidators: true, new: true }
+                );
+                // If no thought is found, this will send the 404 error message
+                if (!thought) {
+                    return res.status(404).json({ message: 'No thought found with that ID' });
+                }
+                // This will send the updated thought data
+                res.json(thought);
+            }
+            // If there is an error, this will send the 500 error message
+            catch (err) {
+                res.status(500).json(err);
+            }
+        }
 };
