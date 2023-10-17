@@ -37,6 +37,7 @@ module.exports = {
             res.status(500).json(err);
         }
     },
+
     // This will update (PUT) a user by their '_id'
     async updateUser(req, res) {
         // This will find a user by their '_id' and update their data
@@ -56,7 +57,7 @@ module.exports = {
         catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
 
     // This will DELETE a user by their '_id'
     async deleteUser(req, res) {
@@ -66,12 +67,15 @@ module.exports = {
             if (!user) {
                 return res.status(404).json({ message: 'No user found with that ID' });
             }
-            res.json('User has been deleted');
+            // This will delete all thoughts associated with the deleted user
+            const thoughts = await Thought.deleteMany({ _id: { $in: user.thoughts } });
+            res.json('User and their thoughts have been deleted');
         }
         catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
+    
     // This will add a friend for a user by their '_id'
     async addFriend(req, res) {
         try {
@@ -92,7 +96,7 @@ module.exports = {
         catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
 
 }
 
