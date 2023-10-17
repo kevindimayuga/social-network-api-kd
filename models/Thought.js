@@ -5,6 +5,37 @@ const { Schema, model, Types } = require('mongoose');
 // This will import the moment.js package
 const dateFormat = require('moment');
 
+// This will create a reaction schema
+const reactionSchema = new Schema(
+    {
+        reactionId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId(),
+        },
+        reactionBody: {
+            type: String,
+            required: 'Please provide a reaction!',
+            minlength: 1,
+            maxlength: 280,
+        },
+        username: {
+            type: String,
+            required: 'Please provide a username!',
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            // This will format the date using moment.js
+            get: (timestamp) => dateFormat(timestamp).format('MMM DD, YYYY [at] hh:mm a'),
+        },
+    },
+    {
+        toJSON: {
+            getters: true,
+        }, 
+    }
+);
+
 // This will create the Thought schema
 const thoughtSchema = new Schema(
     {
@@ -35,37 +66,6 @@ const thoughtSchema = new Schema(
         // This will prevent virtuals from creating duplicate of _id as `id`
         id: false,
     },
-);
-
-// This will create a reaction schema
-const reactionSchema = new Schema(
-    {
-        reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId(),
-        },
-        reactionBody: {
-            type: String,
-            required: 'Please provide a reaction!',
-            minlength: 1,
-            maxlength: 280,
-        },
-        username: {
-            type: String,
-            required: 'Please provide a username!',
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-            // This will format the date using moment.js
-            get: (timestamp) => dateFormat(timestamp).format('MMM DD, YYYY [at] hh:mm a'),
-        },
-    },
-    {
-        toJSON: {
-            getters: true,
-        }, 
-    }
 );
 
 // This will create a virtual called reactionCount that
