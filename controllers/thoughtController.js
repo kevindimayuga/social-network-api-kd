@@ -123,8 +123,11 @@ module.exports = {
                 if (!thought) {
                     return res.status(404).json({ message: 'No thought found with that ID' });
                 }
-                // This will send the updated thought data
-                res.json(thought);
+                // // This will send the updated thought data
+                // res.json(thought);
+
+                // updated to send a message instead of the updated reaction data
+                res.json('This reaction has been deleted');
             }
             // If there is an error, this will send the 500 error message
             catch (err) {
