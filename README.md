@@ -6,9 +6,9 @@ M18 - This repo is a Social Network API that social networks can use for their u
 
 ## Description
 
-The challenge is an Job-seeking coding assessment or take-home assignment (no starter code is provided, we will build this web application by scratch). The goal is to build a Node.js command-line application that takes in user input to generate a logo and save it as an SVG file. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file. I will be applying the skills I've learned in Javascript, Node.js and Object-oriented Programming (OOP). 
+The challenge is an Job-seeking coding assessment or take-home assignment (no starter code is provided, we will build this web application by scratch). The goal is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. I used Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the Express.js and Mongoose packages, I used moment.js to format date timestamps. I also used Insomnia Core to test the API routes.
 
-The motivation behind this project is to create a web application from scratch. It will help me utilize the skills jest, inquirer, javascript and node.js.
+The motivation behind this project is to create an API for a social network using the mentioned packages, tools, and technologies. The purpose of this project is to build the backend of a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The user story and acceptance criteria are as follows:
 
 ## Accessing the Repo or Webpage:
 
@@ -18,11 +18,11 @@ The motivation behind this project is to create a web application from scratch. 
 
 ## Screenshots, GIFs and Videos
 
-- Since this will be a command-line application and not a webpage application, you can use the following [LINK](https://drive.google.com/file/d/15BOovlk2xjK2iz_S8SkLs08eZEKZR7H9/view?usp=sharing) to access a video walkthrough on how to use the SVG Logo Maker application.
-    - [SVG Logo Maker Video Walkthrough](https://drive.google.com/file/d/15BOovlk2xjK2iz_S8SkLs08eZEKZR7H9/view?usp=sharing)
+- Since we will be creating the backend of a social network web application , you can use the following [LINK](https://drive.google.com/file/d/12K71wVXamgkQZXdQyrVQW4lwk1iUr7mI/view) to access a video walkthrough on how to use API to test the routes for the social network.
+    - [Social Network API Video Walkthrough](https://drive.google.com/file/d/12K71wVXamgkQZXdQyrVQW4lwk1iUr7mI/view)
 
 #### Insomnia Testing:
-![social network api screenshot](./assets/images/example-logo.PNG)
+![social network api screenshot](./assets/images/social-network-api-insomnia-route-testing.PNG)
 
 ## Table of Contents
 
@@ -41,8 +41,7 @@ The motivation behind this project is to create a web application from scratch. 
 The following steps were taken to complete the project:
 - Review the purpose of the project, the user story and acceptance criteria
 - Review the basics to starting a command-line application
-- Review JavaScript
-- Review Node.js
+- Review JavaScript, Node.js, Express.js, MongoDB, Mongoose, Moment.js, Insomnia Core
 - Create Professional README file
 - Write code
 - Add website image/gif to README file
@@ -54,11 +53,10 @@ The following steps were taken to complete the project:
 - Clone repo onto local device
 - Open repo in local CLI
 - Make sure node packages are installed by running `npm i`
-    - `Inquirer` and `Jest` need to be installed within the package.json
-- Run `node index.js` in CLI
-- Follow prompts and answer questions
-- New 'logo.svg' file will be created in the 'output' folder
-- To run npm tests to make sure everything passes, run `npm run test` in CLI
+    - `express`, `moment`, `mongoose`, `nodemon` and `validator` need to be installed within the package.json
+- Run `npm run seed` in CLI to seed data
+- Run `npm run start` in CLI to start server
+- Test all routes using `Insomnia`
 
 ## Credits
 
@@ -68,12 +66,13 @@ I used the following resources to help guide me to complete the portfolio projec
 - [W3Schools](https://www.w3schools.com/)
 - [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 - [Node.js Introduction](https://www.w3schools.com/nodejs/nodejs_intro.asp)
-- [Inquirer.js](https://www.npmjs.com/package/inquirer/v/8.2.4)
 - [Mongoose](https://www.npmjs.com/package/mongoose)
+- [MongoDB](https://www.mongodb.com/)
 - [Express.js](https://www.npmjs.com/package/express)
-- [Jest](https://www.npmjs.com/package/jest)
 - [Validator.js](https://www.npmjs.com/package/validator)
 - [Moment.js](https://www.npmjs.com/package/moment)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Insomnia Core](https://insomnia.rest/products/insomnia)
 - [How to take a full page screenshot with a hidden Chrome shortcut](https://zapier.com/blog/full-page-screenshots-in-chrome/)
 
 
@@ -88,9 +87,10 @@ I referred back to Module 18: NoSQL to review activities and the mini project to
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
+![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)
 
 ## Features
 
