@@ -59,9 +59,41 @@ module.exports = {
     }
 
     // This will DELETE a user by their '_id'
-
+    async deleteUser(req, res) {
+        try {
+            const user = await User.findOneAndDelete({ _id: req.params.userId });
+            // If no user is found, this will send the 404 error message
+            if (!user) {
+                return res.status(404).json({ message: 'No user found with that ID' });
+            }
+            res.json('User has been deleted');
+        }
+        catch (err) {
+            res.status(500).json(err);
+        }
+    }
     // This will add a friend for a user by their '_id'
+    async addFriend(req, res) {
+        try {
+            console.log('You are adding a friend');
+            console.log(req.body);
+            const user = await User.findOneAndUpdate(
+                { _id: req.params.userId },
+                { $addToSet: { friends: req.params.friendId } },
+                { runValidators: true, new: true }
+            )
+            // If no user is found, this will send the 404 error message
+            if (!user) {
+                return res.status(404).json({ message: 'No user found with that ID' });
+            }
+            // Otherwise, this will send the updated user data
+            res.json(user);
+        }
+        catch (err) {
+            res.status(500).json(err);
+        }
+    }
 
-    // This will remove a friend from a user by their '_id'
-    
 }
+
+// This will remove a friend from a user by their '_id'
