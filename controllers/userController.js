@@ -51,7 +51,7 @@ module.exports = {
             if (!user) {
                 return res.status(404).json({ message: 'No user found with that ID' });
             }
-            // Otherwise, this will send the updated user data
+            // This will send the updated user data
             res.json(user);
         }
         catch (err) {
@@ -75,7 +75,7 @@ module.exports = {
             res.status(500).json(err);
         }
     },
-    
+
     // This will add a friend for a user by their '_id'
     async addFriend(req, res) {
         try {
@@ -90,7 +90,7 @@ module.exports = {
             if (!user) {
                 return res.status(404).json({ message: 'No user found with that ID' });
             }
-            // Otherwise, this will send the updated user data
+            // This will send the updated user data
             res.json(user);
         }
         catch (err) {
@@ -98,6 +98,23 @@ module.exports = {
         }
     },
 
-}
-
-// This will remove a friend from a user by their '_id'
+    // This will remove a friend from a user by their '_id'
+    async removeFriend(req, res) {
+        try {
+            const user = await User.findOneAndUpdate(
+                { _id: req.params.userId },
+                { $pull: { friends: req.params.friendId } },
+                { runValidators: true, new: true }
+            )
+            // If no user is found, this will send the 404 error message
+            if (!user) {
+                return res.status(404).json({ message: 'No user found with that ID' });
+            }
+            // This will send the updated user data
+            res.json(user);
+        }
+        catch (err) {
+            res.status(500).json(err);
+        }
+    },
+};
