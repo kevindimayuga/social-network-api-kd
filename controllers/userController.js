@@ -44,7 +44,8 @@ module.exports = {
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
-                req.body,
+                { $set: req.body},
+                { runValidators: true },
                 { new: true }
             )
             // If no user is found, this will send the 404 error message
@@ -84,7 +85,8 @@ module.exports = {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
                 { $addToSet: { friends: req.params.friendId } },
-                { runValidators: true, new: true }
+                { runValidators: true },
+                { new: true }
             )
             // If no user is found, this will send the 404 error message
             if (!user) {
@@ -104,7 +106,8 @@ module.exports = {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
                 { $pull: { friends: req.params.friendId } },
-                { runValidators: true, new: true }
+                { runValidators: true },
+                { new: true }
             )
             // If no user is found, this will send the 404 error message
             if (!user) {
