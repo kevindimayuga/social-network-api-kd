@@ -40,16 +40,18 @@ const userSchema = new Schema(
                 ref: 'Users',
             },
         ],
-        // This will define how models based on this 
-        // schema will retrieve data from the database
-        // and serialize it so that it can be sent to the client as JSON
+    },
+    // This will define how models based on this 
+    // schema will retrieve data from the database
+    // and serialize it so that it can be sent to the client as JSON
+    {
         toJSON: {
             virtuals: true,
             getters: true,
         },
         // This will prevent virtuals from creating duplicate of _id as `id`
         id: false,
-    },
+    }
 );
 
 // This will create a virtual called friendCount that
