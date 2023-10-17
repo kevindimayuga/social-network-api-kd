@@ -78,8 +78,11 @@ module.exports = {
                 { username: thought.username },
                 { $pull: { thoughts: req.params.thoughtId } }
             );
-            // This will send the deleted thought data
-            res.json(thought);
+            // // This will send the deleted thought data
+            // res.json(thought);
+
+            // updated to send a message instead of the deleted thought data
+            res.json('This thought has been deleted');
         }
         // If there is an error, this will send the 500 error message
         catch (err) {
