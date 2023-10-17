@@ -50,8 +50,7 @@ module.exports = {
             const thought = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
                 { $set: req.body },
-                { runValidators: true },
-                { new: true }
+                { runValidators: true, new: true }
             )
             // If no thought is found, this will send the 404 error message
             if (!thought) {
@@ -94,8 +93,7 @@ module.exports = {
             const thought = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
                 { $addToSet: { reactions: req.body } },
-                { runValidators: true },
-                { new: true }
+                { runValidators: true, new: true }
             );
             // If no thought is found, this will send the 404 error message
             if (!thought) {
